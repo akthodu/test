@@ -10,3 +10,20 @@ done
 done
 ```
 
+```
+####AWK Usage###
+#Add  all rows in column2
+cat $file|awk '{sum=sum+$2}END{print sum}'
+
+#Print columns if column matches String
+cat $file|awk '($3=="ERROR") {print $0}'
+
+#Print columns if the column value is above.
+cat $file|awk '($5>0) {print $0}'
+
+
+#Sort bycolumn --numbericsort
+cat $file|sort -n -k2
+
+
+

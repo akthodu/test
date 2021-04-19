@@ -25,6 +25,10 @@ cat $file|awk '($5>0) {print $0}'
 #Sort bycolumn --numbericsort
 cat $file|sort -n -k2
 
+```
+###Internal threads using top command. sort internal threads by cpu
+top -c -p 125942 -H -b -n 1
+```
 
 
 
